@@ -229,6 +229,23 @@ public interface RedisStringCommands {
 	 */
 	public Long strLen(byte[] key);
 
+	/**
+	 * 
+	 * SET操作选项
+	 *            
+	 *            .==.       .==.
+	 *           //'^\\     //^'\\
+	 *          // ^^\(\__/)/^ ^^\\
+	 *         //^ ^^ ^/6  6\ ^^^ \\
+	 *        //^ ^^ ^/( .. )\^ ^^ \\
+	 *       // ^^  ^/\|v""v|/\^^ ^ \\
+	 *      // ^^/\/  / '~~' \ \/\^ ^\\
+	 *      ----------------------------------------
+	 *      HERE BE DRAGONS WHICH CAN CREATE MIRACLE
+	 *       
+	 *      @author 静儿(987489055@qq.com)
+	 *
+	 */
 	public static enum SetOption {
 		UPSERT, SET_IF_ABSENT, SET_IF_PRESENT;
 
@@ -245,6 +262,23 @@ public interface RedisStringCommands {
 		}
 	}
 
+	/**
+	 * 	按位操作选项
+	 * 
+	 *            
+	 *            .==.       .==.
+	 *           //'^\\     //^'\\
+	 *          // ^^\(\__/)/^ ^^\\
+	 *         //^ ^^ ^/6  6\ ^^^ \\
+	 *        //^ ^^ ^/( .. )\^ ^^ \\
+	 *       // ^^  ^/\|v""v|/\^^ ^ \\
+	 *      // ^^/\/  / '~~' \ \/\^ ^\\
+	 *      ----------------------------------------
+	 *      HERE BE DRAGONS WHICH CAN CREATE MIRACLE
+	 *       
+	 *      @author 静儿(987489055@qq.com)
+	 *
+	 */
 	public static enum BitOperation {
 		AND, OR, XOR, NOT;
 	}
